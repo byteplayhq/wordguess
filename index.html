@@ -431,7 +431,7 @@
       <span class="kicker">Ready when you are</span>
       <h2>Turn your next stream into a game</h2>
       <p>Free download for Windows. Live on your stream in minutes.</p>
-      <a href="#" class="btn btn-primary btn-lg" id="ctaDownload"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg> Download WordGuess — Free</a>
+      <a href="https://github.com/byteplayhq/wordguess/releases/tag/V1.0" class="btn btn-primary btn-lg" id="ctaDownload"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg> Download WordGuess — Free</a>
     </div>
   </div>
 </section>
@@ -484,9 +484,7 @@
 
   // download buttons
   ['heroDownload','ctaDownload'].forEach(function(id){
-    var b = $(id); if(b) b.addEventListener('click', function(e){
-      if(!DOWNLOAD_URL){ e.preventDefault(); notice('Download goes live soon — drop the link in here.'); }
-    });
+    var b = $(id); if(b) b.setAttribute('href', DOWNLOAD_URL);
   });
   var proBtn = $('proBtn');
   if(proBtn) proBtn.addEventListener('click', function(e){ e.preventDefault(); gotoOrNotice(PRO_URL, 'Pro checkout opens at launch.'); });
