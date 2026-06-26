@@ -1,0 +1,15 @@
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+
+# Never commit app source, secrets, or build artifacts into the public site repo.
+# (They live in the private app project, not here — listed as a safety net.)
+*.exe
+*.zip
+*.pem
+license.json
+eulerstream-key.txt
+wordguess-log.txt
+node_modules/
